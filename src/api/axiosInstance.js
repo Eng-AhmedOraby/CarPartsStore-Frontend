@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://localhost:7103/api",
+  baseURL: "https://car-storem.runasp.net/api",
   withCredentials: true,
 });
 
-export default axiosInstance;
+export default axiosInstance; 

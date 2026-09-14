@@ -24,6 +24,7 @@ export function AuthProvider({ children }) {
   const logout = async () => {
     await axiosInstance.post("/auth/logout");
     setIsAuthenticated(false);
+    window.location.href = "/admin/login";
   };
 
   return (

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginAdmin } from "../api/authApi";
 import { useAuth } from "../context/AuthContext";
@@ -7,8 +7,22 @@ function AdminLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { login } = useAuth();
+  const { login, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isAuthenticated === true) {
+      navigate("/admin/dashboard");
+    }
+  }, [isAuthenticated]);
+
+  if (isAuthenticated === null) {
+    return (
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", color: "var(--text-muted)" }}>
+        جاري التحميل...
+      </div>
+    );
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
