@@ -544,3 +544,7 @@ button { font-family: 'Plus Jakarta Sans', sans-serif; cursor: pointer; }
   gap: 8px;
   justify-content: flex-end;
 }
+
+.product-card.out-of-stock {
+  opacity: 0.7;
+}
