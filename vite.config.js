@@ -1,34 +1,26 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { VitePWA } from 'vite-plugin-pwa'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: "autoUpdate",
       manifest: {
-        name: 'جنات الخير',
-        short_name: 'جنات الخير',
-        description: 'متجر إكسسوارات وقطع غيار سيارات',
-        theme_color: '#0F0F0F',
-        background_color: '#0F0F0F',
-        display: 'standalone',
-        orientation: 'portrait',
-        start_url: '/',
+        name: " درع لإكسسوارات السيارات",
+        short_name: "درع",
+        description: "متجر إكسسوارات وقطع غيار سيارات",
+        theme_color: "#0F0F0F",
+        background_color: "#0F0F0F",
+        display: "standalone",
+        orientation: "portrait",
+        start_url: "/",
         icons: [
-          {
-            src: '/icon-192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: '/icon-512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          }
-        ]
-      }
-    })
+          { src: "/icon-192.png", sizes: "192x192", type: "image/png" },
+          { src: "/icon-512.png", sizes: "512x512", type: "image/png" },
+        ],
+      },
+    }),
   ],
-})
+});
