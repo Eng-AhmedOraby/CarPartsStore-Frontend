@@ -48,7 +48,7 @@ function ProductCard({ product }) {
 
       <div className="product-card__body">
         <div className="product-card__name">{product.name}</div>
-        {product.price !== null && product.price !== undefined && (
+        {product.price !== null && product.price !== undefined && product.price !== 0 && (
         <div className="product-card__price">{product.price} ج.م</div>
         )}
         <span
