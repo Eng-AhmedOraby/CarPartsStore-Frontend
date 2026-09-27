@@ -48,7 +48,9 @@ function ProductCard({ product }) {
 
       <div className="product-card__body">
         <div className="product-card__name">{product.name}</div>
+        {product.price !== null && product.price !== undefined && (
         <div className="product-card__price">{product.price} ج.م</div>
+        )}
         <span
           className={`stock-badge ${product.isAvailable ? "available" : "unavailable"}`}
         >

@@ -35,7 +35,9 @@ function ProductDetails() {
       </div>
 
       <h1>{product.name}</h1>
+      {product.price !== null && product.price !== undefined && (
       <div className="product-details__price">{product.price} ج.م</div>
+      )}
       <span className={`stock-badge ${product.isAvailable ? "available" : "unavailable"}`}>
         {product.isAvailable ? `متوفر — ${product.stockQuantity} قطعة` : "غير متوفر حالياً"}
       </span>

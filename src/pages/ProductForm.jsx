@@ -42,10 +42,6 @@ function ProductForm() {
       setError("اسم المنتج مطلوب");
       return;
     }
-    if (!price || Number(price) <= 0) {
-      setError("السعر لازم يكون أكبر من صفر");
-      return;
-    }
     if (!stockQuantity || Number(stockQuantity) < 0) {
       setError("الكمية لازم تكون صفر أو أكتر");
       return;
